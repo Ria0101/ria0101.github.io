@@ -1,7 +1,7 @@
 ---
 
 ---
-@import "../_sass/settings";
+@use "../_sass/settings" as *;
         * {
     -webkit-transition: none !important;
     transition: none !important;

@@ -13,9 +13,10 @@ nav_exclude: true
 
 // Imports to create final
 
-@import "../_sass/fonts";
-@import "../_sass/settings";
-@import "../_sass/syntax-highlighting";
+@use "../_sass/fonts" as *;
+@use "../_sass/settings" as *;
+@use "../_sass/syntax-highlighting" as *;
+@use "sass:color";
 
 // Global Resets
 //
@@ -196,7 +197,7 @@ table, table.booktabs { width: auto;  //making booktabs style tables the unstyle
 th, td{ font-size: 1.2rem;
         line-height: 1.71428571;  }
 
-.booktabs th.cmid, th { border-bottom: 1px solid lighten($border-color, 25%); }
+.booktabs th.cmid, th { border-bottom: 1px solid color.adjust($border-color, $lightness: 25%); }
 
 .booktabs th.nocmid { border-bottom: none; }
 
