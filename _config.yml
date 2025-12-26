@@ -1,10 +1,10 @@
-baseurl: /tufte-jekyll
-title: Tufte-Jekyll
-subtitle: Content-centric blogging
-author: clay harmon
+baseurl:
+title: About Yuanrui Xu
+subtitle: Yuanrui's profile and writings
+author: Yuanrui Xu
 simple_search: http://google.com/search
-description: A Jekyll theme for content-rich sites
-name: tufte
+description: Yuanrui's profile and writings
+name: riaria
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 permalink: /articles/:short_year/:title
