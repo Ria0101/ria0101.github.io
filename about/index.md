@@ -3,12 +3,64 @@ layout: full-width
 title: About
 ---
 
-The *Tufte-Jekyll* theme is a natural extension of the work done by [Edward Tufte](https://github.com/edwardtufte/tufte-css) and his collaborators on Github who created a CSS file that allows web writers to use the same simple and elegant style employed in his published materials.
+<style>
+  /* Container for the side-by-side layout */
+  .profile-container {
+    display: flex;
+    align-items: center; /* Vertically centers the text with the image */
+    gap: 2rem; /* Space between image and text */
+    margin-top: 20px;
+  }
 
-To incorporate these styles into a Jekyll theme, I have made some very slight modifications that attempt to maintain the feel of the CSS styles in his Github repo.
+  /* Image column styling */
+  .profile-img {
+    flex: 0 0 30%; /* Fixed width of 30% */
+    max-width: 300px; /* Prevents image from getting too huge on large screens */
+  }
 
-Note that this is a full-width layout. This was accomplished by including ```layout: full-width``` in the YAML front matter for this page. Keep in mind that all the Tufte-Jekyll sidenote and marginnote goodness will not work on full-width layouts! 
+  .profile-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+  }
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+  /* Text column styling */
+  .profile-bio {
+    flex: 1; /* Takes up remaining space */
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
 
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column; /* Stacks items vertically */
+      text-align: center; /* Centers text on mobile */
+    }
 
+    .profile-img {
+      flex: 0 0 auto;
+      width: 60%; /* Make image larger relative to container on mobile */
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>
+
+<div class="profile-container">
+  <div class="profile-img">
+    <img src="/assets/img/bio_photo.jpg" alt="Yuanrui Xu" />
+  </div>
+  
+  <div class="profile-bio">
+    <p>
+      Yuanrui Xu is a Ph.D. student at Indiana University focusing on postmodern literature, with a special interest in the works of Thomas Pynchon. Her research applies psychoanalytical and schizoanalytical theories to explore ontological questions. 
+    </p>
+    <p>
+      Before joining IU, she earned her BA and MA in English Language and Literature from Peking University, China.
+    </p>
+    <p>
+      In her free time, she’s a music and riddle-solving video games enthusiast, a fan-fiction writer, and an amateur K-pop dancer.
+    </p>
+  </div>
+</div>
