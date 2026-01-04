@@ -25,3 +25,7 @@ transfer:
   settings: -av
   source: _site/
   destination: ~/Git/clayh53.github.com/
+header_pages:
+  - index.html
+  - blog/blog.html
+  - page/index.md
