@@ -1,0 +1,17 @@
+---
+layout: full-width
+title: Publication
+permalink: /publication/
+---
+
+<h1 class="content-listing-header sans">Publication</h1>
+<ul class="content-listing">
+  {% for publication in site.publications %}
+      <li class="listing">
+        <hr class="slender">
+        <a href="{{ publication.url | prepend: site.baseurl }}"><h3 class="contrast">{{ publication.title }}</h3></a>
+        <br><span class="smaller">{{ publication.date | date: "%B %-d, %Y" }}</span><br/>
+        <div>{{ publication.excerpt }}</div>
+      </li>
+  {% endfor %}
+</ul>

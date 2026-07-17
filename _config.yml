@@ -7,10 +7,14 @@ description: Yuanrui's profile and writings
 name: riaria
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-permalink: /articles/:short_year/:title
+permalink: /conference/:short_year/:title
 timezone: America/New_York
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
+collections:
+  publications:
+    output: true
+    permalink: /publication/:short_year/:title
 post:
   template: _post.txt
   extension: md
@@ -27,5 +31,6 @@ transfer:
   destination: ~/Git/clayh53.github.com/
 header_pages:
   - index.html
-  - abstract/abstract.html
+  - conference/conference.html
+  - publication/publication.html
   # - page/index.md
